@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Profile
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+<ion-content padding>
+  
+
+  <ion-item *ngFor="let item of items" >
+  
+    <h2>Welcome {{item.username}}</h2>
+  
+    <h3>Your profile information is as follows:</h3>
+  
+    <ion-row>
+  
+      <ion-col col-4>
+  
+       Password
+  
+      </ion-col>
+  
+      <ion-col col-8>
+  
+    {{item.password}}
+  
+      </ion-col>
+  
+  </ion-row>
+  
+  
+  
+  <ion-row>
+  
+      <ion-col col-4>
+  
+      Email
+  
+      </ion-col>
+  
+      <ion-col col-8>
+  
+    {{item.email}}
+  
+      </ion-col>
+  
+  </ion-row>
+  
+   </ion-item>
+  
+  </ion-content>

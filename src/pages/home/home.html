@@ -1,17 +1,53 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Home
+    </ion-title>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding id="page2" style="background-color:rgb(151, 255, 212);">
+  <ion-card>
+    <ion-card-header text-center>
+      Category
+    </ion-card-header>
+  
+    <ion-list>
+      <button ion-item>
+        <ion-icon name="pizza" item-start></ion-icon>
+        Food
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="medical" item-start></ion-icon>
+        Hospital
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="cafe" item-start></ion-icon>
+        Cafe
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="paw" item-start></ion-icon>
+        Dog Park
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="beer" item-start></ion-icon>
+        Pub
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="planet" item-start></ion-icon>
+        Space
+      </button>
+  
+    </ion-list>
+  </ion-card>
+  <ion-fab right bottom>
+    <button ion-fab color="danger"(click)="Post()"><ion-icon name="add" ></ion-icon></button>
+  </ion-fab>
 </ion-content>

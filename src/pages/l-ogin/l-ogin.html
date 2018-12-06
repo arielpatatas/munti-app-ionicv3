@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>
+      LOGIN
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page6">
+  <img src="assets/img/T1wb8DvRCSHk6eQWDF7X_icon.png" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+  <form id="lOGIN-form3">
+    <ion-item id="login-username">
+      <ion-label floating></ion-label>
+      <ion-input type="text" placeholder="Username" name="username" #username></ion-input>
+    </ion-item>
+    <ion-item id="login-password">
+      <ion-label floating></ion-label>
+      <ion-input type="password" placeholder="Password" name="password" #password ></ion-input>
+    </ion-item>
+  </form>
+
+  <div class="spacer" style="height:50px;" id="login-spacer2"></div>
+
+  <button ion-button round block (click)="signIn()">Login</button>
+
+  <div class="spacer" style="height:10px;" id="login-spacer2"></div>
+  
+  <button ion-button round outline block (click)="signUp()">Register</button>
+</ion-content>
