@@ -12,7 +12,7 @@ import 'rxjs/add/operator/map';
 })
 export class REGISTERPage {
 
-
+  @ViewChild("name")name;
   @ViewChild("email" )email;
   @ViewChild("username") username;
   @ViewChild("password") password;
@@ -53,7 +53,8 @@ export class REGISTERPage {
       let data = {
         username: this.username.value,
         password: this.password.value,
-        email: this.email.value
+        email: this.email.value,
+        name: this.name.value
       };
       let loader = this.loading.create({
         content: 'Processing please wait...',
@@ -64,7 +65,7 @@ export class REGISTERPage {
         .subscribe( res=> {
 
           loader.dismiss()
-          if(res=="Registration successful"){
+          if(res=="Registration successfull"){
             let alert = this.alertCtrl.create({
               title:"CONGRATS",
               subTitle:(res),
@@ -74,7 +75,7 @@ export class REGISTERPage {
             this.navCtrl.push(LOGINPage);
           }else{
             let alert = this.alertCtrl.create({
-              title:"ERROR",
+              title:"CONGRATS",
               subTitle:(res),
               buttons:['OK']
             

@@ -7,8 +7,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { LOGINPage } from '../pages/l-ogin/l-ogin';
 import { HomePage } from '../pages/home/home';
+import { ProfilePage } from '../pages/profile/profile';
 import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
-import { PostPage } from '../pages/post/post';
 
 @Component({
   templateUrl: 'app.html'

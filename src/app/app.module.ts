@@ -19,6 +19,7 @@ import { REGISTERPage } from '../pages/r-egister/r-egister';
 import { ProfilePage } from '../pages/profile/profile';
 import { SearchPage } from '../pages/search/search';
 import { PostPage } from '../pages/post/post';
+import { NewsfeedPage } from '../pages/newsfeed/newsfeed';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { PostPage } from '../pages/post/post';
     ProfilePage,
     SearchPage,
     PostPage,
+    NewsfeedPage,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +54,7 @@ import { PostPage } from '../pages/post/post';
     ProfilePage,
     SearchPage,
     PostPage,
+    NewsfeedPage,
   ],
   providers: [
     StatusBar,

@@ -15,7 +15,6 @@ export class LOGINPage {
 
   @ViewChild("username") username;
   @ViewChild("password") password;
-  @ViewChild("email") email;
 
   data:string;
 
@@ -96,7 +95,7 @@ export class LOGINPage {
     
         loader.dismiss()
     
-        if(res=="Your Login success"){
+        if(res=="Login Success!"){
     
           let alert = this.alertCtrl.create({
     
@@ -116,7 +115,7 @@ export class LOGINPage {
     
           title:"ERROR",
     
-          subTitle:"Your Login Username or Password is invalid",
+          subTitle:("Username or Password is Invalid"),
     
           buttons: ['OK']
     

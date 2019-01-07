@@ -8,46 +8,115 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page2" style="background-color:rgb(151, 255, 212);">
-  <ion-card>
-    <ion-card-header text-center>
-      Category
-    </ion-card-header>
-  
-    <ion-list>
-      <button ion-item>
-        <ion-icon name="pizza" item-start></ion-icon>
-        Food
-      </button>
-  
-      <button ion-item>
-        <ion-icon name="medical" item-start></ion-icon>
-        Hospital
-      </button>
-  
-      <button ion-item>
-        <ion-icon name="cafe" item-start></ion-icon>
-        Cafe
-      </button>
-  
-      <button ion-item>
-        <ion-icon name="paw" item-start></ion-icon>
-        Dog Park
-      </button>
-  
-      <button ion-item>
-        <ion-icon name="beer" item-start></ion-icon>
-        Pub
-      </button>
-  
-      <button ion-item>
-        <ion-icon name="planet" item-start></ion-icon>
-        Space
-      </button>
-  
-    </ion-list>
-  </ion-card>
-  <ion-fab right bottom>
-    <button ion-fab color="danger"(click)="Post()"><ion-icon name="add" ></ion-icon></button>
-  </ion-fab>
+
+<ion-content style="background-color:rgb(151, 255, 212);">
+  <ion-searchbar></ion-searchbar>
+<ion-content padding id="page2" >
+    <ion-fab right bottom>
+        <button ion-fab color="primary"(click)="Post()"><ion-icon name="add" ></ion-icon></button>
+      </ion-fab>
+  <!-- Beginning of the category card -->
+  <div class="padding_helper" color="white" (click)="CategoryTapped()">
+    <div class="category__image">
+        <div class="text-center image__padding">
+          <p class="section__headline text-center">
+              Electronic Devices
+          </p>
+        </div>
+    </div>
+  </div>
+  <!-- End of the category card -->
+
+    <!-- Beginning of the category card -->
+    <div class="padding_helper" color="white" (click)="CategoryTapped()">
+      <div class="category__image2">
+          <div class="text-center image__padding">
+            <p class="section__headline text-center">
+                Electronic Accessories
+            </p>
+          </div>
+      </div>
+    </div>
+    <!-- End of the category card -->
+
+    <!-- Beginning of the category card -->
+    <div class="padding_helper" color="white" (click)="CategoryTapped()">
+        <div class="category__image3">
+            <div class="text-center image__padding">
+              <p class="section__headline text-center">
+                 Grocery
+              </p>
+            </div>
+        </div>
+      </div>
+      <!-- End of the category card -->
+      <!-- Beginning of the category card -->
+    <div class="padding_helper" color="white" (click)="CategoryTapped()">
+        <div class="category__image4">
+            <div class="text-center image__padding">
+              <p class="section__headline text-center">
+                 Health & Beauty
+              </p>
+            </div>
+        </div>
+      </div>
+      <!-- End of the category card -->
+      <!-- Beginning of the category card -->
+    <div class="padding_helper" color="white" (click)="CategoryTapped()">
+        <div class="category__image5">
+            <div class="text-center image__padding">
+              <p class="section__headline text-center">
+                 Home Appliances
+              </p>
+            </div>
+        </div>
+      </div>
+      <!-- End of the category card -->
+      <!-- Beginning of the category card -->
+    <div class="padding_helper" color="white" (click)="CategoryTapped()">
+        <div class="category__image6">
+            <div class="text-center image__padding">
+              <p class="section__headline text-center">
+                 Pets
+              </p>
+            </div>
+        </div>
+      </div>
+      <!-- End of the category card -->
+      <!-- Beginning of the category card -->
+    <div class="padding_helper" color="white" (click)="CategoryTapped()">
+        <div class="category__image7">
+            <div class="text-center image__padding">
+              <p class="section__headline text-center">
+                 Toys
+              </p>
+            </div>
+        </div>
+      </div>
+      <!-- End of the category card -->
+      <!-- Beginning of the category card -->
+  <div class="padding_helper" color="white" (click)="CategoryTapped()">
+      <div class="category__image8">
+          <div class="text-center image__padding">
+            <p class="section__headline text-center">
+                Men's Fashion
+            </p>
+          </div>
+      </div>
+    </div>
+    <!-- End of the category card -->
+    <!-- Beginning of the category card -->
+  <div class="padding_helper" color="white" (click)="CategoryTapped()">
+      <div class="category__image9">
+          <div class="text-center image__padding">
+            <p class="section__headline text-center">
+                Women's Fashion
+            </p>
+          </div>
+      </div>
+    </div>
+    <!-- End of the category card -->
+
+ 
+</ion-content>
 </ion-content>
