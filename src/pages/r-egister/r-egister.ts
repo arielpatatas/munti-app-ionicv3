@@ -12,10 +12,14 @@ import 'rxjs/add/operator/map';
 })
 export class REGISTERPage {
 
-  @ViewChild("name")name;
+  
   @ViewChild("email" )email;
   @ViewChild("username") username;
   @ViewChild("password") password;
+  @ViewChild("age")age;
+  @ViewChild("fullname")fullname;
+  @ViewChild("contactnumber")contactnumber;
+  @ViewChild("gender")gender;
 
   constructor(public navCtrl: NavController,public alertCtrl: AlertController, private http: Http, public loading: LoadingController) {
   }
@@ -45,19 +49,63 @@ export class REGISTERPage {
       });
       alert.present();
     }
+    else if(this.fullname.value==""){
+      let alert = this.alertCtrl.create({
+        title:"ATTENTION",
+        subTitle:"Name Field is empty",
+        buttons:['OK']
+      });
+      alert.present();
+    }
+    else if(this.contactnumber.value==""){
+      let alert = this.alertCtrl.create({
+        title:"ATTENTION",
+        subTitle:"Contact Number Field is empty",
+        buttons:['OK']
+      });
+      alert.present();
+    }
+    else if(this.age.value==""){
+      let alert = this.alertCtrl.create({
+        title:"ATTENTION",
+        subTitle:"age Field is empty",
+        buttons:['OK']
+      });
+      alert.present();
+    }
+    else if(this.gender.value==""){
+      let alert = this.alertCtrl.create({
+        title:"ATTENTION",
+        subTitle:"Gender Field is empty",
+        buttons:['OK']
+      });
+      alert.present();
+    }
     else{
       var headers=new Headers();
+
       headers.append("Accept",'application/json');
+
       headers.append("Content-Type",'application/json');
+
       let options = new RequestOptions({headers:headers});
+
+
       let data = {
+        
+        fullname: this.fullname.value,
         username: this.username.value,
         password: this.password.value,
         email: this.email.value,
-        name: this.name.value
+        contactnumber: this.contactnumber.value,
+        age: this.age.value,
+        gender: this.gender.value,
+
       };
       let loader = this.loading.create({
+
         content: 'Processing please wait...',
+
       });
       loader.present().then(() => {
         this.http.post('http://localhost/munti/api/register.php', data,options)
@@ -75,7 +123,7 @@ export class REGISTERPage {
             this.navCtrl.push(LOGINPage);
           }else{
             let alert = this.alertCtrl.create({
-              title:"CONGRATS",
+              title:"ERROR",
               subTitle:(res),
               buttons:['OK']
             

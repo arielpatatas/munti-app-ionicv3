@@ -28,21 +28,21 @@
 </ion-row>
     <ion-item *ngFor="let item of items" >
 
-      <h1 text-center>Welcome, {{item.username}}</h1>
+      <h1 text-center>Welcome, {{item.username}} </h1>
 
       <div class="spacer" style="height:50px;"></div>
       
     <ion-row>
   
-      <ion-col col-4>
+      <ion-col col-6>
   
        Fullname:
   
       </ion-col>
   
-      <ion-col col-8>
+      <ion-col col-6>
   
-    <!-- {{item.password}} -->
+        {{ item.fullname }}
   
       </ion-col>
   
@@ -76,7 +76,7 @@
 
     <ion-col col-6>
 
-  {{item.email}}
+  {{item.contactnumber}}
 
     </ion-col>
 
@@ -92,7 +92,7 @@
 
   <ion-col col-6>
 
-{{item.email}}
+{{item.gender}}
 
   </ion-col>
 
@@ -108,7 +108,7 @@
 
   <ion-col col-6>
 
-{{item.email}}
+{{item.age}}
 
   </ion-col>
 

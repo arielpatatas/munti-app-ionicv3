@@ -36,6 +36,16 @@ data:any;
 
 username:any;
 
+fullname:any;
+
+email:any;
+
+contactnumber:any;
+
+gender:any;
+
+age:any;
+
 items:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,  private http: Http,  public loading: LoadingController) {
@@ -51,6 +61,11 @@ items:any;
   ngOnInit(){
 
     this.username = this.navParams.get('username');
+    this.fullname = this.navParams.get('fullname');
+    this.email = this.navParams.get('email');
+    this.contactnumber = this.navParams.get('contactnumber');
+    this.gender = this.navParams.get('gender');
+    this.age = this.navParams.get('age');
 
    
 
@@ -64,7 +79,13 @@ let options = new RequestOptions({ headers: headers });
 
 let data = {
 
-    username: this.username
+    username: this.username,
+    fullname: this.fullname,
+    email: this.email,
+    contactnumber: this.contactnumber,
+    gender: this.gender,
+    age: this.age,
+
 
      };
 
